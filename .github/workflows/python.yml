@@ -71,11 +71,16 @@ jobs:
         pip install selenium
         pip install pytest-html
         pip install Appium-Python-Client
+    - name: Run Pytest on BrowserStack
+      env:
+#        BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+#        BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      run: pytest testcases/test_browserstack.py
 
-    - name: execute py script  # run main.py
-      run: |
-        pytest ./Test_cases/Test_browserstack.py --browser chrome
-        # pytest ./Test_cases/Test_DD.py --browser chrome
+#    - name: execute py script  # run main.py
+#      run: |
+#        pytest ./Test_cases/Test_browserstack.py --browser chrome
+#        # pytest ./Test_cases/Test_DD.py --browser chrome
 
 #    - name: Send Email Report
 #      uses: actions/upload-artifact@v2
