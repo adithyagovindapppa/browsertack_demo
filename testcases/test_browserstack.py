@@ -24,7 +24,7 @@ class TestLogin:
         desired_cap = {
             # "browserstack.user": "kiran_e0PYTO",
             # "browserstack.key": "WEpScbY8MS9VsmZ3Dktg",
-            "app": "bs://7067c48d94769b1e8759b18a9a0aa492d9171c1a",
+            "app": "bs://2bbc809d2f8fff41431867cb11a3aa74c82e749c",
             "browserName": "Chrome",
             "deviceName": "Google Pixel 6 Pro",
             "os_version": "13.0",
@@ -41,13 +41,13 @@ class TestLogin:
 
         # "app": "/home/adithya/Downloads/quest.apk"
         }
-        self.driver = webdriver.Remote("https://kiran_e0PYTO:WEpScbY8MS9VsmZ3Dktg@hub-cloud.browserstack.com/wd/hub",
+        self.driver = webdriver.Remote("https://adithyag_SjW8cV:fEUxHF8ywXMFYyA6gMz6@hub-cloud.browserstack.com/wd/hub",
                                        desired_cap)
 
         # time.sleep(20)
         self.login = Login(self.driver)
         self.login.open_applicaton()
-        time.sleep(10)
+        time.sleep(6)
 
         dashboard_display = self.driver.find_element(By.ID, "com.questalliance.myquest:id/tv_welcome")
         if dashboard_display.is_displayed():

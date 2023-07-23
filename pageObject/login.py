@@ -36,11 +36,11 @@ class Login:
         # self.driver.find_element(By.ID, self.textbox_password).send_keys(ReadConfig.getPassword())
         # print(ReadConfig.getPassword())
         self.driver.find_element(By.ID, self.textbox_password).send_keys("Kiran@123")
-        time.sleep(10)
+        time.sleep(6)
         # # self.driver.
         # self.driver.execute_script('mobile: shell', {'command': 'input keyevent 111'})
         self.driver.hide_keyboard()
-        time.sleep(10)
+        time.sleep(6)
         self.driver.find_element(By.ID, self.button_login).click()
 
 
