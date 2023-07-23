@@ -1,6 +1,6 @@
-import logging
+# import logging
 import time
-import pytest
+# import pytest
 
 from selenium.webdriver.common.by import By
 
@@ -22,8 +22,6 @@ class TestLogin:
         # self.logger.info("***********************Test_001_Login*****************************")
         # self.logger.info("********************test_login_page_tittle started*********************")
         desired_cap = {
-            # "browserstack.user": "kiran_e0PYTO",
-            # "browserstack.key": "WEpScbY8MS9VsmZ3Dktg",
             "app": "bs://2bbc809d2f8fff41431867cb11a3aa74c82e749c",
             "browserName": "Chrome",
             "deviceName": "Google Pixel 6 Pro",
