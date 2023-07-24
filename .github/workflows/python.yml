@@ -68,11 +68,7 @@ jobs:
       run: |
         pip install -r requirements.txt
     - name: Run Pytest on BrowserStack
-#      subject: Test Report
-#      body: |
-#          Hi there,
-#          Here's the test report for the latest test run.
-#          Please find the attached report for more details.
+#
       run: pytest -v -s --capture=tee-sys testcases/test_browserstack.py --html=reports/report.html
 #q
 
