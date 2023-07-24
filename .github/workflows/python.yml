@@ -86,7 +86,7 @@ jobs:
         GMAIL_USERNAME: ${{secrets.GMAIL_USERNAME}}
         GMAIL_PASSWORD: ${{secrets.GMAIL_PASSWORD}}
 
-        RECIPIENT_EMAIL: kiran.sv@tibisolutions.com  # Replace with the recipient's email
+        RECIPIENT_EMAIL: kiran.sv@tibilsolutions.com  # Replace with the recipient's email
 
       run: |
         python reports/send_email_script.py $GMAIL_USERNAME $GMAIL_PASSWORD $RECIPIENT_EMAIL
