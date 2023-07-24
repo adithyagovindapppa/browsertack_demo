@@ -77,7 +77,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Test Report
-        path: ./reports/report.html
+        path: ./reports/loginpage.html
 #
     - name: Configure Gmail and Send Email
       env:
