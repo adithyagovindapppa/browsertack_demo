@@ -37,6 +37,14 @@ if __name__ == "__main__":
     gmail_password = sys.argv[2]
     recipient_email = sys.argv[3]
 
+    subject = "Mobile automation Test Report"
+    body = """
+    Hi there,
+    Here's the test report for the latest test run.
+    Please find the attached report for more details.
+    """
+
+
     send_email(gmail_username, gmail_password, recipient_email)
 # import smtplib
 # from email.mime.text import MIMEText
