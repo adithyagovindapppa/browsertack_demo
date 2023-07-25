@@ -30,6 +30,8 @@ class TestLogin:
     def test_login_page_titles(self):
         self.logger.info("***********************Open application*****************************")
         self.logger.info("********************test_login_page started*********************")
+        username = 'adithyag_SjW8cV'
+        key = 'fEUxHF8ywXMFYyA6gMz6'
         desired_cap = {
             "app": "bs://2bbc809d2f8fff41431867cb11a3aa74c82e749c",
             "browserName": "Chrome",
@@ -41,6 +43,8 @@ class TestLogin:
             # "devicename": "2B101JEGR10785",
             "platformName": "Android",
             "debug": " true",
+            # "browserstack.user": "adithyag_SjW8cV",
+            # "browserstack.key": "fEUxHF8ywXMFYyA6gMz6"
 
             # ... other capabilities ...
             # ... other capabilities ...
@@ -48,8 +52,12 @@ class TestLogin:
 
         # "app": "/home/adithya/Downloads/quest.apk"
         }
-        self.driver = webdriver.Remote("https://adithyag_SjW8cV:fEUxHF8ywXMFYyA6gMz6@hub-cloud.browserstack.com/wd/hub",
-                                       desired_cap)
+        # self.driver = webdriver.Remote("https://adithyag_SjW8cV:fEUxHF8ywXMFYyA6gMz6@hub-cloud.browserstack.com/wd/hub",
+        #                                desired_cap)
+        print(username, key)
+        url = f'https://' + username + ':' + key +'@hub-cloud.browserstack.com/wd/hub'
+        print(url)
+        self.driver = webdriver.Remote(url, desired_cap)
 
         # time.sleep(20)
         self.login = Login(self.driver)
