@@ -21,11 +21,7 @@ class TestLogin:
     logger = CustomLogger.setup_logger('Login', ReadConfig.get_logs_directory() + "/test_login.log",
                                        level=logging.DEBUG)
 
-    # logger = CustomLogger.setup_logger('Login', ReadConfig.get_logs_directory() + "/test_login.log",
-    #                                    level=logging.DEBUG)
 
-    # def __init__(self):
-    #     self.logger = None
 
     def test_login_page_titles(self):
         self.logger.info("***********************Open application*****************************")
@@ -43,17 +39,12 @@ class TestLogin:
             # "devicename": "2B101JEGR10785",
             "platformName": "Android",
             "debug": " true",
-            # "browserstack.user": "adithyag_SjW8cV",
-            # "browserstack.key": "fEUxHF8ywXMFYyA6gMz6"
-
-            # ... other capabilities ...
-            # ... other capabilities ...
 
 
-        # "app": "/home/adithya/Downloads/quest.apk"
+
+
         }
-        # self.driver = webdriver.Remote("https://adithyag_SjW8cV:fEUxHF8ywXMFYyA6gMz6@hub-cloud.browserstack.com/wd/hub",
-        #                                desired_cap)
+
         print(username, key)
         url = f'https://' + username + ':' + key +'@hub-cloud.browserstack.com/wd/hub'
         print(url)

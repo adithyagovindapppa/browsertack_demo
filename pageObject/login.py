@@ -28,17 +28,12 @@ class Login:
         # time.sleep(30)
         self.driver.find_element(By.ID, self.textbox_selection).click()
         time.sleep(6)
-        # self.driver.find_element(By.ID, self.textbox_username).send_keys(ReadConfig.getUserID())
-        # print(ReadConfig.getUserID())
         self.driver.find_element(By.ID, self.textbox_username).send_keys("kiransv8123@gmail.com")
         self.driver.find_element(By.ID, self.textbox_box).click()
         time.sleep(6)
-        # self.driver.find_element(By.ID, self.textbox_password).send_keys(ReadConfig.getPassword())
-        # print(ReadConfig.getPassword())
         self.driver.find_element(By.ID, self.textbox_password).send_keys("Kiran@123")
         time.sleep(6)
-        # # self.driver.
-        # self.driver.execute_script('mobile: shell', {'command': 'input keyevent 111'})
+
         self.driver.hide_keyboard()
         time.sleep(6)
         self.driver.find_element(By.ID, self.button_login).click()
