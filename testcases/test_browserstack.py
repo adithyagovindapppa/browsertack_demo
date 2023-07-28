@@ -36,13 +36,8 @@ class TestLogin:
             "realMobile": "true",
             "autoGrantPermissions": "true",
             "autoAcceptAlerts": "true",
-            # "devicename": "2B101JEGR10785",
             "platformName": "Android",
             "debug": " true",
-
-
-
-
         }
 
         print(username, key)
