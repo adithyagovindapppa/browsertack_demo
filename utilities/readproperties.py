@@ -11,7 +11,7 @@ config.read("/home/adithya/PycharmProjects/Quest/Configurations/config.ini")
 class ReadConfig:
 
     @staticmethod
-    def getuserID():
+    def getusername():
         username = config.get('common_info', 'username')
         return username
 

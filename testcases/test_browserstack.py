@@ -1,19 +1,17 @@
 
 import logging
 import time
-# import pytest
+
 
 from selenium.webdriver.common.by import By
 
 from pageObject.login import Login
 from appium import webdriver
 
+
+
 from utilities import CustomLogger
 from utilities.readproperties import ReadConfig
-
-
-# from utilities import CustomLogger
-# from utilities.readproperties import ReadConfig
 
 
 class TestLogin:
