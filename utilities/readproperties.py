@@ -5,18 +5,18 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome import webdriver, options
 
 config = configparser.RawConfigParser()
-config.read("/home/inchara/PycharmProjects/Quest/Configurations/config.ini")
+config.read("/home/adithya/PycharmProjects/Quest/Configurations/config.ini")
 
 
 class ReadConfig:
 
     @staticmethod
-    def getUserID():
+    def getuserID():
         username = config.get('common_info', 'username')
         return username
 
     @staticmethod
-    def getPassword():
+    def getpassword():
         password = config.get('common_info', 'password')
         return password
 
