@@ -26,8 +26,8 @@ class TestLogin:
     def test_login_page_titles(self):
         self.logger.info("***********************Open application*****************************")
         self.logger.info("********************test_login_page started*********************")
-        username = 'adithyag_SjW8cV'
-        key = 'fEUxHF8ywXMFYyA6gMz6'
+        username = 'adithyag_4QD0iV'
+        key = '1hYZKXrzURRGK6a7xxdw'
         desired_cap = {
             "app": "bs://13f854c9bf9e7e9f95bb7410b57f3498127cec23",
             "browserName": "Chrome",
