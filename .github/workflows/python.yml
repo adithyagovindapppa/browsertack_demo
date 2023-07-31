@@ -42,4 +42,3 @@ jobs:
       run: |
         python reports/send_email_script.py $GMAIL_USERNAME $GMAIL_PASSWORD $RECIPIENT_EMAIL
 
-#k

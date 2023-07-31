@@ -29,7 +29,7 @@ class TestLogin:
         username = 'adithyag_SjW8cV'
         key = 'fEUxHF8ywXMFYyA6gMz6'
         desired_cap = {
-            "app": "bs://2bbc809d2f8fff41431867cb11a3aa74c82e749c",
+            "app": "bs://13f854c9bf9e7e9f95bb7410b57f3498127cec23",
             "browserName": "Chrome",
             "deviceName": "Google Pixel 6 Pro",
             "os_version": "13.0",
