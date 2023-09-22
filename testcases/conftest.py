@@ -25,10 +25,10 @@ from appium import webdriver
 
 @pytest.fixture()
 def setup():
-    username = 'adithyag_4QD0iV'
-    key = '1hYZKXrzURRGK6a7xxdw'
+    username = 'tanu_t8LQSO'
+    key = 'Y44vg1NNsJABQb4fJnTp'
     desired_caps = {
-            "app": "bs://777f3621136297e95b26d978ef789b97e7e06a46",
+            "app": "bs://9598d32930c02c1816e3e428f980b06473487f88",
             "browserName": "Chrome",
             "deviceName": "Google Pixel 6 Pro",
             "os_version": "13.0",
