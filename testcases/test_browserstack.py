@@ -1,64 +1,3 @@
-#
-# import logging
-# import time
-#
-#
-# from selenium.webdriver.common.by import By
-#
-# from pageObject.login import Login
-# from appium import webdriver
-#
-#
-#
-# from utilities import CustomLogger
-# from utilities.readproperties import ReadConfig
-#
-#
-# class TestLogin:
-#     loginpage = None
-#     logger = CustomLogger.setup_logger('Login', ReadConfig.get_logs_directory() + "/test_login.log",
-#                                        level=logging.DEBUG)
-#
-#
-#
-#     def test_login_page_titles(self):
-#         self.logger.info("***********************Open application*****************************")
-#         self.logger.info("********************test_login_page started*********************")
-#         username = 'adithyag_4QD0iV'
-#         key = '1hYZKXrzURRGK6a7xxdw'
-#         desired_cap = {
-#             "app": "bs://13f854c9bf9e7e9f95bb7410b57f3498127cec23",
-#             "browserName": "Chrome",
-#             "deviceName": "Google Pixel 6 Pro",
-#             "os_version": "13.0",
-#             "realMobile": "true",
-#             "autoGrantPermissions": "true",
-#             "autoAcceptAlerts": "true",
-#             "platformName": "Android",
-#             "debug": " true",
-#         }
-#
-#         print(username, key)
-#         url = f'https://' + username + ':' + key +'@hub-cloud.browserstack.com/wd/hub'
-#         print(url)
-#         self.driver = webdriver.Remote(url, desired_cap)
-#
-#         # time.sleep(20)
-#         self.login = Login(self.driver)
-#         self.login.open_applicaton()
-#         time.sleep(6)
-#
-#         dashboard_display = self.driver.find_element(By.ID, "com.questalliance.myquest:id/tv_welcome")
-#         if dashboard_display.is_displayed():
-#             assert True
-#             self.logger.info("******************** Dashborad verify ************************")
-#         else:
-#             # self.driver.save_screenshot("/home/adithya/PycharmProjects/mobiletest/screenshots" + "login.png")
-#             print("login failed")
-#             self.logger.info("******************** Dashborad ended ************************")
-#             assert False
-#         self.driver.quit()
-
 import logging
 import time
 
@@ -75,32 +14,65 @@ class TestLogin:
     logger = CustomLogger.setup_logger('Login', ReadConfig.get_logs_directory() + "/test_login.log",
                                        level=logging.DEBUG)
 
-    def test_login_page_titles(self):
-        self.logger.info("***********************Test_001_Login*****************************")
-        self.logger.info("********************test_login_page_tittle started*********************")
-        desired_cap = {
-            "app": "bs://13f854c9bf9e7e9f95bb7410b57f3498127cec23",
-            "browserName": "Chrome",
-            "deviceName": "Google Pixel 6 Pro",
-            "os_version": "13.0",
-            "realMobile": "true",
-            "autoGrantPermissions": "true",
-            "autoAcceptAlerts": "true",
-            "platformName": "Android",
-            "debug": " true",}
-        self.driver = webdriver.Remote("https://adithyag_4QD0iV:1hYZKXrzURRGK6a7xxdw@hub-cloud.browserstack.com/wd/hub", desired_cap)
-        # time.sleep(20)
+    def test_login_page_titles(self, setup):
+        self.logger.info("***********************Open application*****************************")
+        self.logger.info("********************test_login_page started*********************")
+        self.driver = setup
+        self.driver.implicitly_wait(50)
+        # self.cal = Login(self.driver)
         self.login = Login(self.driver)
         self.login.open_applicaton()
-        time.sleep(10)
+        # time.sleep(20)
+        self.login.click_batch()
+        # time.sleep(10)
+        # self.login.delete_batch_1()
+        # time.sleep(5)
+        self.login.click_add_new_batch()
+        # time.sleep(5)
+        self.login.select_dates()
+        # time.sleep(5)
+        self.login.click_add_batch_button()
+        # time.sleep(5)
+        self.login.click_view_button()
+        # time.sleep(5)
+        self.login.add_learner()
+        # time.sleep(10)
+        self.login.search_learner()
+        # time.sleep(10)
+        self.login.logout_app()
+        time.sleep(5)
+        # if "Learner" in self.driver.page_source:
+        #     assert True
+        # else:
+        #     assert False
 
-        dashboard_display = self.driver.find_element(By.ID, "com.questalliance.myquest:id/tv_welcome")
-        if dashboard_display.is_displayed():
+    def test_golive(self, setup):
+        self.driver = setup
+        self.driver.implicitly_wait(50)
+        self.login = Login(self.driver)
+        self.login.open_applicaton()
+        time.sleep(5)
+        # time.sleep(15)
+        self.login.click_golive()
+        time.sleep(5)
+        self.login.click_createmeeting()
+        # time.sleep(10)
+        self.login.click_participants()
+        # time.sleep(5)
+        self.login.logout_app1()
+        if "tibil testing" in self.driver.page_source:
             assert True
-            self.logger.info("******************** test_login_page_tittle test case passed ************************")
-        else:
-            self.driver.save_screenshot("/home/adithya/PycharmProjects/mobiletest/screenshots" + "login.png")
-            print("login failed")
-            self.logger.info("******************** test_login_page_tittle ended ************************")
+        # else:
             assert False
+    # #
+    def test_livemeeting(self, setup):
+        self.driver = setup
+        self.driver.implicitly_wait(50)
+        self.login = Login(self.driver)
+        self.login.learner_application()
+        time.sleep(10)
+        self.login.click_live()
+
+
+
 
