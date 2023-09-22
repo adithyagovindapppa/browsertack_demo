@@ -28,20 +28,20 @@ class ReadConfig:
         logs_directory = os.path.join(current_directory, 'Logs')
         return logs_directory
 
-    @staticmethod
-    def read_credentials_from_csv():
-        credentials = []
-        details = []
-        filename = "../Testdata/credentials.csv"
-        with open(filename, 'r') as csvfile:
-            csvreader = csv.DictReader(csvfile)
-            for row in csvreader:
-                email = row['email']
-                password = row['password']
-                credentials.append({'email': email, 'password': password})
-        credentials_data = credentials
-        for data in credentials_data:
-            details.append(data['email'])
-            details.append(data['password'])
-        return details
+    # @staticmethod
+    # def read_credentials_from_csv():
+    #     credentials = []
+    #     details = []
+    #     filename = "../Testdata/credentials.csv"
+    #     with open(filename, 'r') as csvfile:
+    #         csvreader = csv.DictReader(csvfile)
+    #         for row in csvreader:
+    #             email = row['email']
+    #             password = row['password']
+    #             credentials.append({'email': email, 'password': password})
+    #     credentials_data = credentials
+    #     for data in credentials_data:
+    #         details.append(data['email'])
+    #         details.append(data['password'])
+    #     return details
 
