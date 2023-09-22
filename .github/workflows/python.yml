@@ -34,7 +34,7 @@ jobs:
 #
     - name: Configure Gmail and Send Email
       env:
-        GMAIL_USERNAME: ${{secrets.GMAIL_USERNAME}}
+        GMAIL_USERNAME: ${{secrets.GMAIL_EMAIL}}
         GMAIL_PASSWORD: ${{secrets.GMAIL_PASSWORD}}
 
         RECIPIENT_EMAIL: kiran.sv@tibilsolutions.com  # Replace with the recipient's email
