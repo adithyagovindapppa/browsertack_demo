@@ -2,7 +2,7 @@ import time
 
 from selenium.webdriver.common.by import By
 
-from testcases.demo import result
+# from testcases.demo import result
 from selenium.webdriver.support import  expected_conditions as EC
 
 
