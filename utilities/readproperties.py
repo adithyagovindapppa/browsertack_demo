@@ -32,7 +32,7 @@ class ReadConfig:
     def read_credentials_from_csv():
         credentials = []
         details = []
-        filename = "/home/adithya/Documents/Appiumlocal/Testdata/credentials.csv"
+        filename = "../Testdata/credentials.csv"
         with open(filename, 'r') as csvfile:
             csvreader = csv.DictReader(csvfile)
             for row in csvreader:
