@@ -41,4 +41,7 @@ jobs:
 
       run: |
         python reports/send_email_script.py $GMAIL_EMAIL $GMAIL_PASSWORD $RECIPIENT_EMAIL
+        python reports/send_email_script.py $GMAIL_EMAIL $GMAIL_PASSWORD $RECIPIENT_EMAIL
+        python reports/send_email_script.py $GMAIL_EMAIL $GMAIL_PASSWORD $RECIPIENT_EMAIL
+
 
