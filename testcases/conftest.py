@@ -7,7 +7,7 @@
 #         'platformVersion': '13.0',  # Replace with the target platform version
 #         'deviceName': '2B101JEGR10785',  # Replace with the target device name
 #         # 'appPackage': 'your_app_package',  # Replace with your app's package name
-#         'app': "/home/adithya/Downloads/newtest.apk",# Replace with your app's main activity name
+#         'app': "/home/adithya/Downloads/mobile.apk",# Replace with your app's main activity name"/home/adithya/Downloads/mobile.apk"
 #         # 'noReset': True,
 #         # 'autoGrantPermissions': True,
 #         # 'autoAcceptAlerts': True,
@@ -28,7 +28,7 @@ def setup():
     username = 'tanu_t8LQSO'
     key = 'Y44vg1NNsJABQb4fJnTp'
     desired_caps = {
-            "app": "bs://9598d32930c02c1816e3e428f980b06473487f88",
+            "app": "bs://f49ee8f13e2cb17fe25c074f7de0532d3e4caec5",
             "browserName": "Chrome",
             "deviceName": "Google Pixel 6 Pro",
             "os_version": "13.0",
